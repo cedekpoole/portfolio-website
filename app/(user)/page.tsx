@@ -6,7 +6,7 @@ import HomeTitle from "@/assets/home-title.png";
 import ActionButton from "@/components/ActionButton";
 import { MotionDiv } from "@/components/MotionDiv";
 
-// import link
+// import link and image next component
 import Link  from "next/link";
 import Image from "next/image";
 
@@ -37,21 +37,19 @@ const Home = () => {
           </MotionDiv>
           {/* CONTACT ME BUTTON */}
           <div className="relative">
-            <div className="before:absolute before:-right-8 after:absolute after:-top-5 after:left-52 after:z-[-1] after:content-bang sm:before:content-arrow">
-              <MotionDiv
-              duration={1}
-              x={-50}
+            <MotionDiv duration={1} y={50} className="before:absolute before:-right-8 after:absolute after:-top-5 after:left-52 after:z-[-1] after:content-bang sm:before:content-arrow">
+              <div
               >
                 <Link href="/contact">
                   <ActionButton>Contact Me</ActionButton>
                 </Link>
-              </MotionDiv>
-            </div>
+              </div>
+            </MotionDiv>
           </div>
         </div>
         {/* HERO IMAGE */}
         <div className="md:z-10">
-          <Image src={Hero} alt="Profile Image" className="md:mt-20" />
+          <Image src={Hero} alt="Profile Image" className="md:mt-20" priority={true} />
         </div>
       </div>
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}
