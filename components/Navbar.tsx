@@ -2,7 +2,7 @@
 
 // Description: This file contains the navbar component
 import useMediaQuery from "@/hooks/useMediaQuery";
-// import CV from "@/assets/curriculum-vitae.pdf";
+import { MotionDiv } from "@/components/MotionDiv";
 import Logo from "@/assets/logo.png";
 import ActionButton from "@/components/ActionButton";
 import { useEffect, useState } from "react";
@@ -20,9 +20,6 @@ import {
 import Link  from "next/link";
 import Image from "next/image";
 
-
-// Import framer-motion
-import { motion } from "framer-motion";
 
 
 // Navbar component with prop 'isTopOfPage' to determine if navbar should be transparent or not
@@ -67,7 +64,7 @@ const Navbar = () => {
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
             <Link href="/">
-              <Image src={Logo} className="h-13 w-14" alt="Logo" />
+              <Image src={Logo} width={80} height={80} alt="Logo" priority={true} />
             </Link>
             {/* RIGHT SIDE 
              if viewport is above 1060px, display links in the navbar 
@@ -116,20 +113,14 @@ const Navbar = () => {
                       fade
                     />
                   </Link>
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                    variants={{
-                      hidden: { opacity: 0, x: 100 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
+                  <MotionDiv
+                  duration={1}
+                  x={100}
                   >
-                    <a href="" download>
+                    <a href="/CV.pdf" download>
                       <ActionButton>Download CV</ActionButton>
                     </a>
-                  </motion.div>
+                  </MotionDiv>
                 </div>
               </div>
             ) : (
