@@ -9,5 +9,5 @@ body,
     height: 100%;
     width: 100%;
     @apply text-gray-600;
-    @apply bg-slate-300
+    @apply bg-slate-300;
 }
