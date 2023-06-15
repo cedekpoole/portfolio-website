@@ -50,7 +50,7 @@ const Navbar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   // State to determine if menu is toggled
-  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
 
   // if not top of page, set navbar background to gray-20
   const navbarBackground = isTopOfPage ? "" : "bg-gray-20 drop-shadow";
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
             <Link href="/">
-              <Image src={Logo} width={80} height={80} alt="Logo" priority={true} />
+              <Image src={Logo} width={70} height={70} alt="Logo" priority={true} />
             </Link>
             {/* RIGHT SIDE 
              if viewport is above 1060px, display links in the navbar 
