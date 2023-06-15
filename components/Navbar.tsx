@@ -1,9 +1,11 @@
+'use client'
+
 // Description: This file contains the navbar component
 import useMediaQuery from "@/hooks/useMediaQuery";
 // import CV from "@/assets/curriculum-vitae.pdf";
 import Logo from "@/assets/logo.png";
 import ActionButton from "@/components/ActionButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Import icons
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -22,12 +24,27 @@ import Image from "next/image";
 // Import framer-motion
 import { motion } from "framer-motion";
 
-type Props = {
-  isTopOfPage: boolean;
-};
 
 // Navbar component with prop 'isTopOfPage' to determine if navbar should be transparent or not
-const Navbar = ({ isTopOfPage }: Props) => {
+const Navbar = () => {
+
+    const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+
+      } else {
+        setIsTopOfPage(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const flexBetween = "flex items-center justify-between";
   const navLink =
     "hover:text-primary-100 focus:text-primary-100 transition duration-500";
