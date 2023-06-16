@@ -6,7 +6,7 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-10 bg-slate-300">
+    <footer className="py-10 bg-slate-300 sticky top-[100vh]">
       <div className="justify-content mx-auto w-5/6 gap-16 text-gray-300 md:flex">
         <div className="mt-5 basis-1/4 md:mt-3">
           {/* LINKS */}

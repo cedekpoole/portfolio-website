@@ -35,6 +35,7 @@ const TechIcon = () => {
     <div className="mx-auto mt-7 flex max-w-[400px] flex-wrap justify-center gap-14 md:mx-0 md:w-[300px]">
       {icons.map((Icon, index) => (
         <motion.div
+        key={index}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

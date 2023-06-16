@@ -12,7 +12,7 @@ import { MotionDiv } from "@/components/MotionDiv";
 const About = () => {
   return (
     <section className="md:pb-12">
-      <div className="mx-auto w-5/6 py-24">
+      <div className="mx-auto w-5/6 py-28">
         <div className="flex place-content-center">
           <MotionDiv
           className="relative z-10"

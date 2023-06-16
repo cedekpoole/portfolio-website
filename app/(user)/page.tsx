@@ -54,7 +54,7 @@ const Home = () => {
       </div>
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}
       <div className="relative">
-        <div className="before:absolute before:-bottom-10 before:right-5 md:before:content-portfoliotext">
+        <div className="before:absolute before:-bottom-10 before:right-5 md:before:content-portfoliotext before:z-20">
           <Image className="mt-14" src={HomePageText} alt="Homepage Text" />
         </div>
       </div>
