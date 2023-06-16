@@ -4,7 +4,6 @@ import Summary from "@/assets/summary-text.png";
 import TechIcon from "@/components/TechIcon";
 import ActionButton from "@/components/ActionButton";
 
-
 import Image from "next/image";
 import Link from "next/link";
 import { MotionDiv } from "@/components/MotionDiv";
@@ -14,11 +13,7 @@ const About = () => {
     <section className="md:pb-12">
       <div className="mx-auto w-5/6 py-28">
         <div className="flex place-content-center">
-          <MotionDiv
-          className="relative z-10"
-          duration={0.8}
-          x={100}
-          >
+          <MotionDiv className="relative z-10" duration={0.8} x={100}>
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
               <Image src={AboutText} alt="About Page Title" />
@@ -29,17 +24,17 @@ const About = () => {
         <div className="justify-between md:flex">
           {/* SUMMARY SECTION */}
           <MotionDiv
-          className="relative z-20 flex-col items-end justify-end p-10 md:flex"
-          duration={0.8}
-          y={100}
+            className="relative z-20 flex-col items-end justify-end p-10 md:flex"
+            duration={0.8}
+            y={100}
           >
             <div className="flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
               <Image src={Summary} alt="Summary" className="mb-3" />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               React.js fanatic who is currently building projects using
-              TailwindCSS and Typescript; interested in also learning more about
-              back-end development.
+              and TailwindCSS and TypeScript; interested in also learning more about back-end
+              development. This website was built using Next.js and Sanity IO has been used as means to easily update project data!
             </p>
             <p className="mb-7 md:w-[60%] md:p-3">
               Completed an intensive 16 week front-end web development
@@ -62,17 +57,13 @@ const About = () => {
           </MotionDiv>
           {/* SKILLS (TECH ICONS) */}
           <div className="mt-5 text-center">
-            <MotionDiv
-            duration={0.8}
-            x={50}
-            >
-            <h2 className="text-lg font-bold">
-              Skills<span className="text-primary-100">...</span>
-            </h2>
+            <MotionDiv duration={0.8} x={50}>
+              <h2 className="text-lg font-bold">
+                Skills<span className="text-primary-100">...</span>
+              </h2>
             </MotionDiv>
-      
-              <TechIcon />
-            
+
+            <TechIcon />
           </div>
         </div>
       </div>
