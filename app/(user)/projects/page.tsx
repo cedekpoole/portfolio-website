@@ -9,7 +9,6 @@ import { projects } from '@/sanity/lib/projectData'
 
 import ProjectCard from "@/components/ProjectCard";
 
-export const runtime = 'edge' // 'nodejs' (default) | 'edge' 
 // Create a function that returns the JSX for the projects page
 const Projects = () => {
   
