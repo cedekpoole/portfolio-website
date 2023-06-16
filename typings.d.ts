@@ -1,3 +1,4 @@
+
 type Base = {
     _createdAt: string;
     _id: string;
@@ -7,9 +8,17 @@ type Base = {
 }
 
 interface Project extends Base {
-    body: Block[];
+    description: string;
     mainImage: Image;
     title: string,
+    slug: Slug
+    github: string;
+    liveProject: string;
+}
+
+interface Description {
+    _type: "description";
+    current: string;
 }
 
 interface Image {
@@ -20,14 +29,6 @@ interface Image {
 interface Reference {
     _ref: string;
     _type: "reference"
-}
-
-interface Block {
-    _key: string;
-    _type: "block";
-    children: Span[];
-    markDefs: any[];
-    style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
 }
 
 interface Span {

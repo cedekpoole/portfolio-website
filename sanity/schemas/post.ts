@@ -12,6 +12,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    }),
+
+    defineField({
       name: 'github',
       title: 'Github Project URL',
       type: 'url',
@@ -30,24 +36,13 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
     }),
     defineField({
       name: 'projectNumber',
       title: 'Project Number',
       type: 'number',
     }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+
   ],
 
   preview: {

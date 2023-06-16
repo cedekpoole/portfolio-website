@@ -6,6 +6,8 @@ import Image from "next/image";
 import { MotionDiv } from "@/components/MotionDiv";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
+import ProjectList from "@/components/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 
 
 // Create a function that returns the JSX for the projects page
@@ -34,9 +36,11 @@ const Projects = async () => {
         </MotionDiv>
         {/* Map through the project data and render a project card for each project */}
         <div className="z-30 mt-5 grid justify-items-stretch place-content-center gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project: Project) => (
-                'LOL'
-            ))}
+          {projects.map((project: Project) => (
+            <ProjectCard
+              project={project}
+            />
+          ))}
         </div>
       </div>
     </section>
