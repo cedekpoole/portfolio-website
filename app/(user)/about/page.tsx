@@ -33,8 +33,9 @@ const About = () => {
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               React.js fanatic who is currently building projects using
-              and TailwindCSS and TypeScript; interested in also learning more about back-end
-              development. This website was built using Next.js and Sanity IO has been used as means to easily update project data!
+              TailwindCSS and TypeScript; interested in also learning more about
+              back-end development. This website was built using Next.js and
+              Sanity IO has been used as means to easily update project data!
             </p>
             <p className="mb-7 md:w-[60%] md:p-3">
               Completed an intensive 16 week front-end web development
