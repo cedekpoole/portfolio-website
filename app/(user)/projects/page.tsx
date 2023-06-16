@@ -6,17 +6,19 @@ import Image from "next/image";
 import { MotionDiv } from "@/components/MotionDiv";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
-import ProjectList from "@/components/ProjectCard";
+
 import ProjectCard from "@/components/ProjectCard";
 
-// Create a function that returns the JSX for the projects page
-const Projects = async () => {
-  const query = groq`
+const query = groq`
     *[_type=='post'] {
         ...,
     } | order(projectNumber desc)`;
 
   const projects = await client.fetch(query);
+
+// Create a function that returns the JSX for the projects page
+const Projects = () => {
+  
   return (
     <section className="bg-slate-200">
       <div className="mx-auto min-h-full w-5/6 pb-20 pt-32">
