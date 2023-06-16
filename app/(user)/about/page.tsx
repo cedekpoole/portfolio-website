@@ -1,22 +1,23 @@
-
 // Description: About page
 import AboutText from "@/assets/about-text.png";
 import Summary from "@/assets/summary-text.png";
 import TechIcon from "@/components/TechIcon";
 import ActionButton from "@/components/ActionButton";
 
-import { MotionDiv } from "@/components/MotionDiv";
+
 import Image from "next/image";
 import Link from "next/link";
+import { MotionDiv } from "@/components/MotionDiv";
 
 const About = () => {
   return (
-    <section className=" bg-slate-200 md:pb-12">
+    <section className="md:pb-12">
       <div className="mx-auto w-5/6 py-24">
         <div className="flex place-content-center">
-          <MotionDiv 
+          <MotionDiv
+          className="relative z-10"
           duration={0.8}
-          x={-100}
+          x={100}
           >
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
@@ -28,6 +29,7 @@ const About = () => {
         <div className="justify-between md:flex">
           {/* SUMMARY SECTION */}
           <MotionDiv
+          className="relative z-20 flex-col items-end justify-end p-10 md:flex"
           duration={0.8}
           y={100}
           >
@@ -60,11 +62,17 @@ const About = () => {
           </MotionDiv>
           {/* SKILLS (TECH ICONS) */}
           <div className="mt-5 text-center">
+            <MotionDiv
+            duration={0.8}
+            x={50}
+            >
             <h2 className="text-lg font-bold">
               Skills<span className="text-primary-100">...</span>
             </h2>
+            </MotionDiv>
+      
               <TechIcon />
-              
+            
           </div>
         </div>
       </div>
