@@ -4,17 +4,11 @@ import ProjectText from "@/assets/projectText.png";
 import Image from "next/image";
 // import framer-motion
 import { MotionDiv } from "@/components/MotionDiv";
-import { groq } from "next-sanity";
-import { client } from "@/sanity/lib/client";
+
+import { projects } from '@/sanity/lib/projectData'
 
 import ProjectCard from "@/components/ProjectCard";
 
-const query = groq`
-    *[_type=='post'] {
-        ...,
-    } | order(projectNumber desc)`;
-
-  const projects = await client.fetch(query);
 
 // Create a function that returns the JSX for the projects page
 const Projects = () => {
