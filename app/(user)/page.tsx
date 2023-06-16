@@ -36,7 +36,7 @@ const Home = () => {
             </p>
           </MotionDiv>
           {/* CONTACT ME BUTTON */}
-          <div className="relative">
+          <div className="relative mt-4">
             <MotionDiv duration={1} y={50} className="before:absolute before:-right-8 after:absolute after:-top-5 after:left-52 after:z-[-1] after:content-bang sm:before:content-arrow">
               <div
               >
