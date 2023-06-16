@@ -4,10 +4,19 @@ import ProjectText from "@/assets/projectText.png";
 import Image from "next/image";
 // import framer-motion
 import { MotionDiv } from "@/components/MotionDiv";
+import { groq } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
 
 // Create a function that returns the JSX for the projects page
-const Projects = () => {
+const Projects = async () => {
+
+    const query = groq`
+    *[_type=='post'] {
+        ...,
+    } | order(projectNumber desc)`
+
+    const projects = await client.fetch(query)
   return (
     <section className="bg-slate-200">
       <div className="mx-auto min-h-full w-5/6 pb-20 pt-32">
@@ -25,7 +34,9 @@ const Projects = () => {
         </MotionDiv>
         {/* Map through the project data and render a project card for each project */}
         <div className="z-30 mt-5 grid justify-items-stretch place-content-center gap-7 sm:grid-cols-2 lg:grid-cols-3">
-        
+            {projects.map((project: Project) => (
+                'LOL'
+            ))}
         </div>
       </div>
     </section>
