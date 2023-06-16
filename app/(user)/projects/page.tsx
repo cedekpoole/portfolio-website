@@ -9,24 +9,22 @@ import { client } from "@/sanity/lib/client";
 import ProjectList from "@/components/ProjectCard";
 import ProjectCard from "@/components/ProjectCard";
 
-
 // Create a function that returns the JSX for the projects page
 const Projects = async () => {
-
-    const query = groq`
+  const query = groq`
     *[_type=='post'] {
         ...,
-    } | order(projectNumber desc)`
+    } | order(projectNumber desc)`;
 
-    const projects = await client.fetch(query)
+  const projects = await client.fetch(query);
   return (
     <section className="bg-slate-200">
       <div className="mx-auto min-h-full w-5/6 pb-20 pt-32">
         {/* Create a div that contains the title of the page */}
         <MotionDiv
-        className="mb-16 flex place-content-center"
-        duration={0.8}
-        x={-100}
+          className="mb-16 flex place-content-center"
+          duration={0.8}
+          x={-100}
         >
           <div className="relative z-10">
             <div className=" after:top-15 before:absolute before:-right-8 before:-top-5 before:content-bang after:absolute after:-left-80 after:z-[-1] after:content-drops">
@@ -35,11 +33,9 @@ const Projects = async () => {
           </div>
         </MotionDiv>
         {/* Map through the project data and render a project card for each project */}
-        <div className="z-30 mt-5 grid justify-items-stretch place-content-center gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project: Project) => (
-            <ProjectCard
-              project={project}
-            />
+        <div className="z-30 mt-5 grid place-content-center justify-items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project: Project, index: number) => (
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>
