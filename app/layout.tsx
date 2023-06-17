@@ -8,6 +8,8 @@ export const metadata = {
   description: 'A Project Portfolio Website',
 }
 
+export const revalidate = 60; // revalidate every 60 seconds
+
 export default function RootLayout({
   children,
 }: {
