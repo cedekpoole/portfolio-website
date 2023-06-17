@@ -1,8 +1,11 @@
 import { MotionDiv } from "@/components/MotionDiv";
 import Image from "next/image";
 import Link from "next/link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { GiClick } from "react-icons/gi";
+
 import urlFor from "@/sanity/lib/urlFor";
 
 type Props = {
@@ -23,10 +26,12 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         </h5>
         <p className="mb-5 text-sm font-normal text-gray-200">{project.description}</p>
         <div className="mt-auto flex justify-between">
-          <Link href={project.liveProject} target="_blank">
+          <Link href={project.liveProject} target="_blank" className="relative">
+            <div className="before:absolute before:content-bang before:scale-75 before:-right-8 before:-top-5">
             <button className="rounded-md bg-green-200 px-5 py-2 transition duration-500 hover:bg-primary-100 hover:text-white">
-              Online
+              See Project <GiClick className="inline" />
             </button>
+            </div>
           </Link>
           <Link href={project.github} target="_blank">
             <button className="pr-4">
