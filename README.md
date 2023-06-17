@@ -31,31 +31,31 @@ Here are some screenshots of the website:
 
 The home page features a hero image with a short introduction about myself. 
 
-![Home Page](./src/assets/home-screenshot.png)
+![Home Page](./assets/home-screenshot.png)
 
 <ins>Projects Page</ins>
 
 The next section is a ‘projects’ section, which features a few of my previous projects. The projects are displayed in a grid, and each project features a title, a short description, a link to the project’s GitHub repository, and a link to the project’s live website. The projects are also fully responsive, and will adjust to the size of the screen they are being viewed on.
 
-![Projects Page](./src/assets/project-screenshot.png)
+![Projects Page](./assets/project-screenshot.png)
 
 <ins>About Me Page</ins> 
 
 The next section is an ‘about me’ section which displays a link to a downloadable CV (in PDF format) and a list of skills and technologies that I have had experience with. 
 
-![About Me Page](./src/assets/about-screenshot.png)
+![About Me Page](./assets/about-screenshot.png)
 
 <ins>Contact Me Page</ins>
 
 The final section is a ‘contact me’ section, which features a contact form. The contact form is created using react-hook-form, and is fully functional. The contact form features a name field, an email field and a message field. The contact form also features a submit button, which will send the user’s message to my email address. 
 
-![Contact Me Page](./src/assets/contact-screenshot.png)
+![Contact Me Page](./assets/contact-screenshot.png)
 
 <ins>Footer</ins>
 
 The footer features links to my social media accounts. It provides users easy access to my GitHub and LinkedIn profiles, in addition to my CV and contact form.
 
-![Footer](./src/assets/footer-screenshot.png)
+![Footer](./assets/footer-screenshot.png)
 
 ## License 
 This project is licensed under the terms of the MIT license (please see the [LICENSE](./LICENSE) file for more information).
