@@ -10,7 +10,7 @@ import { MotionDiv } from "@/components/MotionDiv";
 import Link  from "next/link";
 import Image from "next/image";
 
-export const revalidate = 30; // revalidate every 30 seconds
+export const revalidate = 60; // revalidate every 60 seconds
 
 const Home = () => {
   return (
