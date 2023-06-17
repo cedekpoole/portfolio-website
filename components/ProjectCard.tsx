@@ -14,7 +14,6 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     <MotionDiv
     className="z-20 flex"
     duration={0.8}
-    x={25}
   >
     <div className="flex flex-col rounded-lg border border-slate-200 bg-slate-200 shadow-xl hover:scale-105">
     <Image className="h-56 rounded-t-lg object-cover" src={urlFor(project.mainImage).url()} alt={project.title} width={550} height={550}/>
