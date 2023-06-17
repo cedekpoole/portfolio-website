@@ -17,7 +17,7 @@ const Projects = () => {
       <div className="mx-auto min-h-full w-5/6 pb-20 pt-32">
         {/* Create a div that contains the title of the page */}
         <MotionDiv
-          className="mb-16 flex place-content-center"
+          className="mb-20 flex place-content-center"
           duration={0.8}
           x={-100}
         >
