@@ -19,7 +19,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     duration={0.8}
   >
     <div className="flex flex-col rounded-lg border border-slate-200 bg-slate-200 shadow-xl hover:scale-105">
-    <Image className="h-56 rounded-t-lg object-cover" src={urlFor(project.mainImage).url()} alt={project.title} width={550} height={550}/>
+    <Image className="h-56 rounded-t-lg object-cover" src={urlFor(project.mainImage).url()} alt={project.title} width={650} height={650}/>
       <div className="flex flex-col content-between p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
           {project.title}
