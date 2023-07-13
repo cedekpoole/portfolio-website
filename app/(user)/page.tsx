@@ -6,9 +6,9 @@ import HomeTitle from "@/assets/home-title.png";
 import ActionButton from "@/components/ActionButton";
 import { MotionDiv } from "@/components/MotionDiv";
 
-import About from "./about/page";
-import Contact from "./contact/page";
-import Projects from "./projects/page";
+// import About from "./about/page";
+// import Contact from "./contact/page";
+// import Projects from "./projects/page";
 
 // import link and image next component
 import Link  from "next/link";
@@ -63,7 +63,7 @@ const Home = () => {
           <Image className="mt-14" src={HomePageText} alt="Homepage Text" />
         </div>
       </div>
-      <div className="-mt-10 md:mt-0">
+      {/* <div className="-mt-10 md:mt-0">
         <Projects />
       </div>
       <div className="-mt-20">
@@ -71,7 +71,7 @@ const Home = () => {
       </div>
       <div className="-mt-28 md:-mt-10">
       <Contact />
-      </div>
+      </div> */}
     </section>
   );
 };
