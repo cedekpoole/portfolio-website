@@ -16,7 +16,7 @@ In terms of content, my portfolio showcases a few of my previous projects, a hom
 - Tailwind CSS
 - TypeScript
 - Vercel
-- npm (react-router-dom, react-form-hook, framer-motion, react-icons)
+- npm (react-form-hook, framer-motion, react-icons)
 
 On the whole, I found that TailwindCSS, TypeScript, and React.js worked together seamlessly and provided a great developer experience. The combination of these technologies allowed me to build a high-quality web application quickly and efficiently. In addition to this, Next.js was used for speed and routing, and Sanity was utilised as means to easily add new project data. I had a very pleasant experience with both of these technologies! If you're a web developer looking for a modern and effective development stack, I highly recommend giving these technologies a try.
 
