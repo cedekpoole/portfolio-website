@@ -18,7 +18,7 @@ export const revalidate = 60; // revalidate every 60 seconds
 
 const Home = () => {
   return (
-    <section className="gap-16 bg-slate-200 py-10 md:py-20 md:pb-0 relative">
+    <section className="gap-16 bg-slate-200 py-10 md:py-20 md:pb-0">
       {/* HERO IMAGE AND MAIN HEADER */}
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         {/* MAIN HEADER */}
@@ -63,9 +63,15 @@ const Home = () => {
           <Image className="mt-14" src={HomePageText} alt="Homepage Text" />
         </div>
       </div>
-      <Projects />
-      <About />
+      <div className="-mt-10 md:mt-0">
+        <Projects />
+      </div>
+      <div className="-mt-20">
+        <About/>
+      </div>
+      <div className="-mt-28 md:-mt-10">
       <Contact />
+      </div>
     </section>
   );
 };
