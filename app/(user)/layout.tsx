@@ -7,7 +7,7 @@ const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata = {
   title: 'CEDEKPOOLE',
-  description: 'A Project Portfolio Website',
+  description: 'Cameron Edek Poole: A Project Portfolio Website',
 }
 
 export default function RootLayout({
