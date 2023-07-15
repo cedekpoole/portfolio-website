@@ -13,10 +13,10 @@ const About = () => {
     <section className="md:pb-12">
       <div className="mx-auto w-5/6 py-28">
         <div className="flex place-content-center">
-          <MotionDiv className="relative z-10" duration={0.8} x={100}>
+          <MotionDiv className="relative z-10" duration={0.8} x={0}>
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
-              <Image src={AboutText} alt="About Page Title" />
+              <Image src={AboutText} alt="About Page Title" width={400} />
             </div>
           </MotionDiv>
         </div>
@@ -28,8 +28,8 @@ const About = () => {
             duration={0.8}
             y={100}
           >
-            <div className="flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
-              <Image src={Summary} alt="Summary" className="mb-3" />
+            <div className="flex before:absolute before:-bottom-10 md:w-[60%] mx-auto md:before:content-line2">
+              <Image src={Summary} alt="Summary" className="mb-3 mx-auto" />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               React.js fanatic who is currently building projects using
@@ -56,13 +56,7 @@ const About = () => {
             </div>
           </MotionDiv>
           {/* SKILLS (TECH ICONS) */}
-          <div className="mt-5 text-center">
-            <MotionDiv duration={0.8} x={50}>
-              <h2 className="text-lg font-bold">
-                Skills<span className="text-primary-100">...</span>
-              </h2>
-            </MotionDiv>
-
+          <div className="mt-5">
             <TechIcon />
           </div>
         </div>
