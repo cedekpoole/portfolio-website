@@ -23,12 +23,12 @@ const About = () => {
         <div className="justify-between md:flex">
           {/* SUMMARY SECTION */}
           <MotionDiv
-            className="relative z-20 flex-col items-end justify-end p-10 md:flex"
+            className="relative z-20 flex-col items-end justify-end md:p-10 md:flex"
             duration={0.8}
             y={100}
           >
             <div className="mx-auto flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
-              <img src={Summary.src} alt="Summary" className="mx-auto mb-3" />
+              <img src={Summary.src} alt="Summary" className="mx-auto mb-3 mt-3 md:mt-0" />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               Graduated from Trilogy Education’s Front-End Web Development
