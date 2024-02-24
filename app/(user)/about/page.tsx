@@ -27,18 +27,21 @@ const About = () => {
             duration={0.8}
             y={100}
           >
-            <div className="flex before:absolute before:-bottom-10 md:w-[60%] mx-auto md:before:content-line2">
-              <img src={Summary.src} alt="Summary" className="mb-3 mx-auto" />
+            <div className="mx-auto flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
+              <img src={Summary.src} alt="Summary" className="mx-auto mb-3" />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
-              React.js fanatic who is currently building projects using
-              TailwindCSS and TypeScript; interested in also learning more about
-              back-end development. This website was built using Next.js, and Sanity io - a headless CMS -  has been used as means to easily update project data!
+              Graduated from Trilogy Education’s Front-End Web Development
+              Program, achieving an overall score of 100%. Also completed an
+              internship with Goodwright, focusing on data visualisation for
+              scientific applications, utilising technologies such as React.js,
+              TailwindCSS and Highcharts.
             </p>
             <p className="mb-7 md:w-[60%] md:p-3">
-              Completed an intensive 16 week front-end web development
-              certification provided by Trilogy Education, achieving an overall
-              score of 100%. Check out{" "}
+              Currently learning the MERN stack as means to learn more about
+              backend development (Node.js, Express and MongoDB). My next
+              project will be a Full-Stack Philosophical Debate and Learning
+              platform named "DialectiQ". Check out{" "}
               <Link
                 href="https://webdev-blog-cedekpoole.vercel.app"
                 target="_blank"
