@@ -16,7 +16,7 @@ const Projects = () => {
       <div className="mx-auto min-h-full w-5/6 pb-20 pt-32">
         {/* Create a div that contains the title of the page */}
         <MotionDiv
-          className="mb-20 flex place-content-center"
+          className="mb-12 md:mb-16 flex place-content-center"
           duration={0.8}
           x={-100}
         >
@@ -27,7 +27,7 @@ const Projects = () => {
           </div>
         </MotionDiv>
         {/* Map through the project data and render a project card for each project */}
-        <div className="z-30 mt-5 grid place-content-center justify-items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="z-30 grid place-content-center justify-items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project: Project, index: number) => (
             <ProjectCard key={index} project={project} />
           ))}
