@@ -2,7 +2,6 @@
 import ContactText from "@/assets/contact-text.png";
 import { ContactForm } from "@/components/ContactForm";
 import { MotionDiv } from "@/components/MotionDiv";
-import Image from "next/image";
 
 
 const Contact = () => {
@@ -17,7 +16,7 @@ const Contact = () => {
         >
           <div className="relative">
             <div className="before:absolute before:-right-96 before:top-14 md:before:content-arrow3">
-              <Image src={ContactText} alt="Contact Text" />
+              <img src={ContactText.src} alt="Contact Text" />
             </div>
           </div>
           <p className="mt-5">

@@ -1,7 +1,6 @@
 // Description: This is the main file for the projects page.
 // It imports the project data from the json file and renders the project cards.
 import ProjectText from "@/assets/projectText.png";
-import Image from "next/image";
 // import framer-motion
 import { MotionDiv } from "@/components/MotionDiv";
 
@@ -23,7 +22,7 @@ const Projects = () => {
         >
           <div className="relative z-10">
             <div className=" after:top-15 before:absolute before:-right-8 before:-top-5 before:content-bang after:absolute after:-left-80 after:z-[-1] after:content-drops">
-              <Image src={ProjectText} alt="Projects" />
+              <img src={ProjectText.src} alt="Projects" />
             </div>
           </div>
         </MotionDiv>
