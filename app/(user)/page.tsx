@@ -30,7 +30,7 @@ const Home = () => {
           >
             <div className="relative">
               <div className="before:absolute before:-left-20 before:-top-20 after:absolute after:-left-8 after:-top-5 after:scale-x-[-1] after:content-bang md:before:content-webdevtext">
-                <Image className="mt-4" src={HomeTitle} alt="Homepage Title" />
+                <img className="mt-4" src={HomeTitle.src} alt="Homepage Title" />
               </div>
             </div>
             <p className="p-5 text-sm">
@@ -60,7 +60,7 @@ const Home = () => {
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}
       <div className="relative">
         <div className="before:absolute before:-bottom-10 before:right-5 md:before:content-portfoliotext before:z-20">
-          <Image className="mt-14" src={HomePageText} alt="Homepage Text" />
+          <img className="mt-14" src={HomePageText.src} alt="Homepage Text" />
         </div>
       </div>
       <div className="-mt-10 md:mt-0">

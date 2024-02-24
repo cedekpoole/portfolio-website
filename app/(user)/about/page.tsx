@@ -16,7 +16,7 @@ const About = () => {
           <MotionDiv className="relative z-10" duration={0.8} x={0}>
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
-              <Image src={AboutText} alt="About Page Title" width={400} />
+              <img src={AboutText.src} alt="About Page Title" width={400} />
             </div>
           </MotionDiv>
         </div>
