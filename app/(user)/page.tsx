@@ -59,13 +59,13 @@ const Home = () => {
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}
       <div className="relative">
         <div className="before:absolute before:-bottom-10 before:right-5 md:before:content-portfoliotext before:z-20">
-          <img className="mt-14" src={HomePageText.src} alt="Homepage Text" />
+          <img className="mt-14 hidden md:block" src={HomePageText.src} alt="Homepage Text" />
         </div>
       </div>
-      <div className="-mt-10 md:mt-0">
+      <div className="-mt-10 md:mt-10">
         <Projects />
       </div>
-      <div className="-mt-20">
+      <div className="-mt-28">
         <About/>
       </div>
       <div className="-mt-28 md:-mt-12">
