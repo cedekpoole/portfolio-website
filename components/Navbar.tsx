@@ -18,7 +18,6 @@ import {
 
 // Import link and image component
 import Link  from "next/link";
-import Image from "next/image";
 
 
 
@@ -64,7 +63,7 @@ const Navbar = () => {
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
             <Link href="/">
-              <Image src={Logo} width={70} height={70} alt="Logo" priority={true} />
+              <img src={Logo.src} width={70} height={70} alt="Logo" />
             </Link>
             {/* RIGHT SIDE 
              if viewport is above 1060px, display links in the navbar 

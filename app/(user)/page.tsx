@@ -12,7 +12,6 @@ import Projects from "./projects/page";
 
 // import link and image next component
 import Link  from "next/link";
-import Image from "next/image";
 
 export const revalidate = 60; // revalidate every 60 seconds
 
@@ -54,7 +53,7 @@ const Home = () => {
         </div>
         {/* HERO IMAGE */}
         <div className="md:z-10">
-          <Image src={Hero} alt="Profile Image" className="md:mt-20" priority={true} />
+          <img src={Hero.src} alt="Profile Image" className="md:mt-20" />
         </div>
       </div>
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}

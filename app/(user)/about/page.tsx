@@ -4,7 +4,6 @@ import Summary from "@/assets/summary-text.png";
 import TechIcon from "@/components/TechIcon";
 import ActionButton from "@/components/ActionButton";
 
-import Image from "next/image";
 import Link from "next/link";
 import { MotionDiv } from "@/components/MotionDiv";
 
@@ -29,7 +28,7 @@ const About = () => {
             y={100}
           >
             <div className="flex before:absolute before:-bottom-10 md:w-[60%] mx-auto md:before:content-line2">
-              <Image src={Summary} alt="Summary" className="mb-3 mx-auto" />
+              <img src={Summary.src} alt="Summary" className="mb-3 mx-auto" />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               React.js fanatic who is currently building projects using
