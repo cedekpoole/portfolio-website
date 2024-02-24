@@ -68,7 +68,7 @@ const Home = () => {
       <div className="-mt-20">
         <About/>
       </div>
-      <div className="-mt-28 md:-mt-10">
+      <div className="-mt-28 md:-mt-15">
       <Contact />
       </div>
     </section>
