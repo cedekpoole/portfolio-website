@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         {/* Add logo and copyright text */}
         <div className="flex basis-1/2 flex-col items-end md:mt-14">
-          <Image height={70} width={70} src={Logo} alt="Logo" />
+          <img height={70} width={70} src={Logo.src} alt="Logo" />
           <p className="mt-2 text-xs">
             <FaRegCopyright className="mr-1 inline" />
             cedekpoole{" "}
