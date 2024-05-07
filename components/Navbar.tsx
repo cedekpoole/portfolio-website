@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 // Description: This file contains the navbar component
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -17,20 +17,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 // Import link and image component
-import Link  from "next/link";
-
-
+import Link from "next/link";
 
 // Navbar component with prop 'isTopOfPage' to determine if navbar should be transparent or not
 const Navbar = () => {
-
-    const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-
       } else {
         setIsTopOfPage(false);
       }
@@ -57,13 +53,17 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div
-        className={`${flexBetween} ${navbarBackground} fixed top-0 z-30 w-full py-4 md:pt-6 md:pb-5`}
+        className={`${flexBetween} ${navbarBackground} fixed top-0 z-30 w-full py-3 md:pb-5 md:pt-6`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
             <Link href="/">
-              <img src={Logo.src} width={70} height={70} alt="Logo" />
+              <img
+                src={Logo.src}
+                className={"h-auto w-10 sm:w-16 md:w-[70px]"}
+                alt="Logo"
+              />
             </Link>
             {/* RIGHT SIDE 
              if viewport is above 1060px, display links in the navbar 
@@ -112,10 +112,7 @@ const Navbar = () => {
                       fade
                     />
                   </Link>
-                  <MotionDiv
-                  duration={1}
-                  x={100}
-                  >
+                  <MotionDiv duration={1} x={100}>
                     <a href="/CV.pdf" download>
                       <ActionButton>Download CV</ActionButton>
                     </a>
@@ -124,10 +121,10 @@ const Navbar = () => {
               </div>
             ) : (
               <button
-                className="rounded-full bg-primary-100 p-2"
+                className="rounded-full bg-primary-100 p-1 sm:p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-6 w-6 text-white" />
+                <Bars3Icon className="h-auto w-4 sm:w-6 text-white" />
               </button>
             )}
           </div>
