@@ -6,6 +6,7 @@ import ActionButton from "@/components/ActionButton";
 
 import Link from "next/link";
 import { MotionDiv } from "@/components/MotionDiv";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -15,7 +16,12 @@ const About = () => {
           <MotionDiv className="relative z-10" duration={0.8} x={0}>
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
-              <img src={AboutText.src} alt="About Page Title" width={400} />
+              <Image
+                src={AboutText.src}
+                alt="About Page Title"
+                width={400}
+                height={400}
+              />
             </div>
           </MotionDiv>
         </div>
@@ -23,12 +29,18 @@ const About = () => {
         <div className="justify-between md:flex">
           {/* SUMMARY SECTION */}
           <MotionDiv
-            className="relative z-20 flex-col items-end justify-end md:p-10 md:flex"
+            className="relative z-20 flex-col items-end justify-end md:flex md:p-10"
             duration={0.8}
             y={100}
           >
             <div className="mx-auto flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
-              <img src={Summary.src} alt="Summary" className="mx-auto mb-3 mt-3 md:mt-0" />
+              <Image
+                src={Summary.src}
+                alt="Summary"
+                className="mx-auto mb-3 mt-3 md:mt-0"
+                width={100}
+                height={100}
+              />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
               Graduated from Trilogy Education’s Front-End Web Development

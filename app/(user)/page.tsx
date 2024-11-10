@@ -10,8 +10,8 @@ import About from "./about/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
 
-// import link and image next component
 import Link from "next/link";
+import Image from "next/image";
 
 export const revalidate = 60; // revalidate every 60 seconds
 
@@ -26,10 +26,12 @@ const Home = () => {
           <MotionDiv duration={0.5} x={-50}>
             <div className="relative">
               <div className="before:absolute before:-left-20 before:-top-20 after:absolute after:-left-8 after:-top-5 after:scale-x-[-1] after:content-bang md:before:content-webdevtext">
-                <img
+                <Image
                   className="mt-4"
                   src={HomeTitle.src}
                   alt="Homepage Title"
+                  width={400}
+                  height={400}
                 />
               </div>
             </div>
@@ -57,17 +59,26 @@ const Home = () => {
         </div>
         {/* HERO IMAGE */}
         <div className="md:z-10">
-          <img src={Hero.src} alt="Profile Image" className="md:mt-20" />
+          <Image
+            src={Hero.src}
+            alt="Profile Image"
+            className="md:mt-20"
+            width={1200}
+            height={1200}
+          />
         </div>
       </div>
       {/* NAME IMG + PROJECT PORTFOLIO TITLE IMG */}
       <div className="relative">
-        <div className="before:absolute before:-bottom-10 before:right-5 before:z-20 md:before:content-portfoliotext">
-          <img
-            className="mt-14 hidden md:block"
-            src={HomePageText.src}
-            alt="Homepage Text"
-          />
+        <div className="before:absolute before:-bottom-20 before:right-5 before:z-20 md:before:content-portfoliotext">
+          <div className="relative h-24 w-full">
+            <Image
+              className="mt-14 hidden md:block"
+              src={HomePageText.src}
+              alt="Homepage Text"
+              fill // Optional: Ensures the image fits the container
+            />
+          </div>
         </div>
       </div>
       <div className="-mt-10 md:mt-10">

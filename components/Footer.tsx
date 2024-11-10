@@ -6,7 +6,7 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-10 bg-slate-300 sticky top-[100vh]">
+    <footer className="sticky top-[100vh] bg-slate-300 py-10">
       <div className="justify-content mx-auto w-5/6 gap-16 text-gray-300 md:flex">
         <div className="mt-5 basis-1/4 md:mt-3">
           {/* LINKS */}
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         {/* Add logo and copyright text */}
         <div className="flex basis-1/2 flex-col items-end md:mt-14">
-          <img height={70} width={70} src={Logo.src} alt="Logo" />
+          <Image height={70} width={70} src={Logo.src} alt="Logo" />
           <p className="mt-2 text-xs">
             <FaRegCopyright className="mr-1 inline" />
             cedekpoole{" "}
