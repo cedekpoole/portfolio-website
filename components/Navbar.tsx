@@ -18,6 +18,7 @@ import {
 
 // Import link and image component
 import Link from "next/link";
+import Image from "next/image";
 
 // Navbar component with prop 'isTopOfPage' to determine if navbar should be transparent or not
 const Navbar = () => {
@@ -59,10 +60,12 @@ const Navbar = () => {
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
             <Link href="/">
-              <img
+              <Image
                 src={Logo.src}
                 className={"h-auto w-10 sm:w-16 md:w-[70px]"}
                 alt="Logo"
+                width={100}
+                height={100}
               />
             </Link>
             {/* RIGHT SIDE 
@@ -124,7 +127,7 @@ const Navbar = () => {
                 className="rounded-full bg-primary-100 p-1 sm:p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-auto w-4 sm:w-6 text-white" />
+                <Bars3Icon className="h-auto w-4 text-white sm:w-6" />
               </button>
             )}
           </div>
