@@ -13,7 +13,7 @@ const Contact = () => {
             <div className="before:absolute before:-right-96 before:top-14 md:before:content-arrow3">
               <Image
                 src={ContactText.src}
-                alt="Contact Text"
+                alt="Contact"
                 width={500}
                 height={500}
               />

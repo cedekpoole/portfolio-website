@@ -14,3 +14,10 @@ body,
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.65;
 }
+
+/* Keyboard-only focus ring using brand colour */
+*:focus-visible {
+    outline: 2px solid #BE3144;
+    outline-offset: 3px;
+    border-radius: 2px;
+}

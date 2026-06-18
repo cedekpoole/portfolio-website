@@ -76,8 +76,8 @@ const Home = () => {
             <Image
               className="mt-14 hidden md:block"
               src={HomePageText.src}
-              alt="Homepage Text"
-              fill // Optional: Ensures the image fits the container
+              alt=""
+              fill
             />
           </div>
         </div>
