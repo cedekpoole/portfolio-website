@@ -6,7 +6,7 @@
 
 Welcome to my portfolio! Creating a project portfolio can be an exciting yet daunting task. From deciding what technologies to use to crafting the perfect design, there are many considerations to keep in mind. In today's world, having a professional and impressive online presence is crucial, especially for those in creative fields. A project portfolio is an excellent way to showcase your work and skills, and with the right tools and technologies, it's easier than ever to create an impressive portfolio website.
 
-In terms of content, my portfolio showcases a few of my previous projects, a home page, an ‘about me’ section with a downloadable CV plus a functional contact form created via react-hook-form. The whole website is fully responsive, and will adjust to the size of the screen it is being viewed on. I have set up a custom domain for this website via Cloudflare. The link to the deployed site is here: [https://www.cedekpoole.com](https://www.cedekpoole.com).  I hope you enjoy it!
+In terms of content, my portfolio showcases a few of my previous projects, a home page, an ‘about me’ section with a downloadable CV plus a functional contact form created via react-hook-form. The whole website is fully responsive, and will adjust to the size of the screen it is being viewed on. I have set up a custom domain for this website via Cloudflare. The link to the deployed site is here: [https://cedekpoole-website.vercel.app/](https://cedekpoole-website.vercel.app/).  I hope you enjoy it!
 
 
 #### Technologies Used
@@ -66,7 +66,7 @@ This project is licensed under the terms of the MIT license (please see the [LIC
 --- 
 
 ## Roadmap 
-Even though I see this website as complete, that is not to say that I will not add further improvements to it in the future. If I find tech that would synergise well with the rest of the app, I plan to use it. On top of this, I will make sure that my previous projects section is up-to-date with my latest builds. If you have any suggestions on how I could improve the overall design and functionality of my portfolio, feel free to [contact me](https://www.cedekpoole.com/contact) :).
+Even though I see this website as complete, that is not to say that I will not add further improvements to it in the future. If I find tech that would synergise well with the rest of the app, I plan to use it. On top of this, I will make sure that my previous projects section is up-to-date with my latest builds. If you have any suggestions on how I could improve the overall design and functionality of my portfolio, feel free to [contact me](https://cedekpoole-website.vercel.app/contact) :).
 
 ## Questions
 
