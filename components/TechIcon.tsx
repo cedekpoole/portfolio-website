@@ -1,30 +1,17 @@
 "use client";
 
-import { AiFillHtml5 } from "react-icons/ai";
-import { FaCss3Alt, FaReact, FaNodeJs, FaNpm } from "react-icons/fa";
-import {
-  SiJavascript,
-  SiTailwindcss,
-  SiTypescript,
-  SiBootstrap,
-  SiJquery,
-  SiFirebase,
-} from "react-icons/si";
+import { FaPython, FaReact } from "react-icons/fa";
+import { SiPostgresql, SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 
 const icons = [
-  SiJavascript,
-  AiFillHtml5,
-  FaReact,
-  SiBootstrap,
-  SiTypescript,
-  FaCss3Alt,
-  SiJquery,
-  SiFirebase,
-  SiTailwindcss,
-  FaNodeJs,
-  FaNpm,
+  FaPython,
+  SiPostgresql,
   BsGit,
+  FaReact,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
 ];
 
 import { motion } from "framer-motion";
