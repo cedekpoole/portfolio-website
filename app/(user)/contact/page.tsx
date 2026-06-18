@@ -20,10 +20,10 @@ const Contact = () => {
             </div>
           </div>
           <p className="mt-5">
-            I am interested in both full-time and freelance opportunities. If
-            you would like to get in touch, please feel free to leave a message
-            by filling out the form below! Anyone interested in collaborating on
-            a project is also welcome to reach out :)
+            I am interested in full-time opportunities. If you would like to get
+            in touch, please feel free to leave a message by filling out the
+            form below! Anyone interested in collaborating on a project is also
+            welcome to reach out :)
           </p>
         </MotionDiv>
         {/* FORM CONTENT */}
