@@ -15,7 +15,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
     <MotionDiv className="z-20 flex" duration={0.8}>
       <div className="group flex flex-col justify-between overflow-hidden rounded-lg border border-slate-200 bg-slate-200 shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
-        <Link href={project.liveProject} target="_blank" className="relative">
+        <Link href={project.liveProject} target="_blank" rel="noopener noreferrer" className="relative">
           <Image
             className="h-56 transform rounded-t-lg object-cover transition duration-500 ease-in-out group-hover:scale-110 group-hover:opacity-50"
             src={urlFor(project.mainImage).url()}
@@ -32,9 +32,15 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             {project.description}
           </p>
           <div className="self-end">
-            <Link href={project.github} target="_blank">
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${project.title} on GitHub`}
+            >
               <button className="pr-4">
                 <FontAwesomeIcon
+                  aria-hidden="true"
                   className="duration-200 hover:scale-105 hover:text-primary-100"
                   icon={faGithub}
                   size="2x"

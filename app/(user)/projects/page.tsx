@@ -27,6 +27,7 @@ const Projects = () => {
                 alt="Projects"
                 width={700}
                 height={500}
+                sizes="(max-width: 768px) 80vw, 700px"
               />
             </div>
           </div>
