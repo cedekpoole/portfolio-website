@@ -22,6 +22,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             alt={project.title}
             width={650}
             height={650}
+            sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 30vw"
           />
         </Link>
         <div className="flex flex-col justify-between p-5">
