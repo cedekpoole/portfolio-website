@@ -2,7 +2,6 @@
 // The page also contains a button that links to the contact page.
 import Hero from "@/assets/hero.png";
 import HomePageText from "@/assets/home-text.png";
-import HomeTitle from "@/assets/home-title.png";
 import ActionButton from "@/components/ActionButton";
 import { MotionDiv } from "@/components/MotionDiv";
 
@@ -25,21 +24,23 @@ const Home = () => {
           {/* HEADINGS */}
           <MotionDiv duration={0.5} x={-50}>
             <div className="relative">
-              <div className="before:absolute before:-left-20 before:-top-20 after:absolute after:-left-8 after:-top-5 after:scale-x-[-1] after:content-bang md:before:content-webdevtext">
-                <Image
-                  className="mt-4"
-                  src={HomeTitle.src}
-                  alt="Homepage Title"
-                  width={400}
-                  height={400}
-                />
+              <div className="after:absolute after:-left-8 after:-top-5 after:scale-x-[-1] after:content-bang">
+                <div className="mt-4">
+                  <h1 className="text-4xl font-bold leading-tight text-gray-200 sm:text-5xl">
+                    Cameron Poole
+                  </h1>
+                  <p className="mt-2 text-lg font-bold tracking-wide text-primary-100 sm:text-xl">
+                    Data Engineer · Data Analyst · Analytics Engineer
+                  </p>
+                </div>
               </div>
             </div>
             <p className="p-5 text-sm">
-              A front-end web developer and philosophy graduate with an affinity
-              for problem solving. A quick and adaptable learner for all things
-              tech related, with a passion in creating engaging websites.
-              Available for both freelance and full-time opportunities :)
+              MSc Data Science candidate moving into data analytics &amp;
+              analytics engineering. I work with SQL and Python, with a
+              software-development background in building, testing and shipping
+              real code. Open to data analyst, analytics engineering and junior
+              data engineering roles in London.
             </p>
           </MotionDiv>
           {/* CONTACT ME BUTTON */}
