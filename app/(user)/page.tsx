@@ -30,7 +30,7 @@ const Home = () => {
                     Cameron Poole
                   </h1>
                   <p className="mt-2 text-lg font-bold tracking-wide text-primary-100 sm:text-xl">
-                    Data Analyst · Analytics Engineer
+                    Data Engineer · Data Analyst · Analytics Engineer
                   </p>
                 </div>
               </div>
