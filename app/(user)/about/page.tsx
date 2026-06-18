@@ -42,7 +42,7 @@ const About = () => {
                 height={100}
               />
             </div>
-            <p className="mb-3 text-gray-300 md:w-[60%]">
+            <p className="mb-3 leading-relaxed text-gray-300 md:w-[60%]">
               Completing an MSc Data Science at Kingston (September 2026),
               following a BA Philosophy (1st class, Newcastle). My internship at
               Goodwright focused on data visualisation for scientific
