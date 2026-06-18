@@ -62,10 +62,12 @@ const Home = () => {
         <div className="md:z-10">
           <Image
             src={Hero.src}
-            alt="Profile Image"
+            alt="Cameron Poole"
             className="md:mt-20"
-            width={1200}
-            height={1200}
+            width={600}
+            height={600}
+            priority
+            sizes="(max-width: 768px) 80vw, (max-width: 1060px) 45vw, 500px"
           />
         </div>
       </div>
@@ -78,6 +80,7 @@ const Home = () => {
               src={HomePageText.src}
               alt=""
               fill
+              sizes="100vw"
             />
           </div>
         </div>
