@@ -21,7 +21,6 @@ module.exports = {
         lg: "1280px",
       },
       content: {
-        webdevtext: "url('/webdevhome.png')",
         portfoliotext: "url('/portfolio-text.png')",
         arrow: "url('/arrow.png')",
         bang: "url('/bang.png')",

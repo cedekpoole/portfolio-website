@@ -43,17 +43,17 @@ const About = () => {
               />
             </div>
             <p className="mb-3 text-gray-300 md:w-[60%]">
-              Graduated from Trilogy Education’s Front-End Web Development
-              Program, achieving an overall score of 100%. Also completed an
-              internship with Goodwright, focusing on data visualisation for
-              scientific applications, utilising technologies such as React.js,
-              TailwindCSS and Highcharts.
+              Completing an MSc Data Science at Kingston (September 2026),
+              following a BA Philosophy (1st class, Newcastle). My internship at
+              Goodwright focused on data visualisation for scientific
+              applications (React, Highcharts), and I&apos;ve since built and
+              published open-source data-visualisation packages. I&apos;m now
+              focused on the analytics and engineering side of data — deepening
+              my SQL and Python and learning dbt, data modelling and cloud —
+              while building out a data portfolio.
             </p>
             <p className="mb-7 md:w-[60%] md:p-3">
-              Currently learning the MERN stack as means to learn more about
-              backend development (Node.js, Express and MongoDB). My next
-              project will be a Full-Stack Philosophical Debate and Learning
-              platform named "DialectiQ". Check out{" "}
+              Check out{" "}
               <Link
                 href="https://webdev-blog-cedekpoole.vercel.app"
                 target="_blank"
@@ -61,7 +61,7 @@ const About = () => {
               >
                 my blog
               </Link>{" "}
-              to see what I'm currently working on.
+              to see what I&apos;m currently working on.
             </p>
             <div className="flex justify-evenly">
               <Link href="/CV.pdf" download>
