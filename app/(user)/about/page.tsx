@@ -52,18 +52,7 @@ const About = () => {
               my SQL and Python and learning dbt, data modelling and cloud —
               while building out a data portfolio.
             </p>
-            <p className="mb-7 md:w-[60%] md:p-3">
-              Check out{" "}
-              <Link
-                href="https://webdev-blog-cedekpoole.vercel.app"
-                target="_blank"
-                className="underline decoration-primary-100 transition duration-200 hover:text-primary-100"
-              >
-                my blog
-              </Link>{" "}
-              to see what I&apos;m currently working on.
-            </p>
-            <div className="flex justify-evenly">
+            <div className="mt-8 flex justify-evenly">
               <Link href="/CV.pdf" download>
                 <ActionButton>Download CV</ActionButton>
               </Link>
