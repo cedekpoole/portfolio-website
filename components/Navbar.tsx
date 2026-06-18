@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const flexBetween = "flex items-center justify-between";
   const navLink =
-    "hover:text-primary-100 focus:text-primary-100 transition duration-500";
+    "hover:text-primary-100 focus-visible:text-primary-100 transition duration-300";
 
   // use media query hook to determine if screen is above 1060px
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -59,11 +59,11 @@ const Navbar = () => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT HAND SIDE (LOGO) */}
-            <Link href="/">
+            <Link href="/" aria-label="Cameron Poole – home">
               <Image
                 src={Logo.src}
                 className={"h-auto w-10 sm:w-16 md:w-[70px]"}
-                alt="Logo"
+                alt="Cameron Poole logo"
                 width={100}
                 height={100}
               />
@@ -89,27 +89,39 @@ const Navbar = () => {
                 </div>
                 <div className={`${flexBetween} gap-8`}>
                   <Link
+                    aria-label="Discord profile"
                     href="https://discordapp.com/users/1003033771618086922"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FontAwesomeIcon
+                      aria-hidden="true"
                       className="h-6 w-6 text-gray-300 hover:text-primary-100"
                       icon={faDiscord}
                       fade
                     />
                   </Link>
                   <Link
+                    aria-label="LinkedIn profile"
                     href="https://www.linkedin.com/in/cam-edek-poole/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FontAwesomeIcon
+                      aria-hidden="true"
                       className="h-6 w-6 text-gray-300 hover:text-primary-100"
                       icon={faLinkedin}
                       fade
                     />
                   </Link>
-                  <Link href="https://github.com/cedekpoole" target="_blank">
+                  <Link
+                    aria-label="GitHub profile"
+                    href="https://github.com/cedekpoole"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FontAwesomeIcon
+                      aria-hidden="true"
                       className="h-6 w-6 text-gray-300 hover:text-primary-100"
                       icon={faGithub}
                       fade
@@ -124,10 +136,12 @@ const Navbar = () => {
               </div>
             ) : (
               <button
+                aria-label={isMenuToggled ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuToggled}
                 className="rounded-full bg-primary-100 p-1 sm:p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-auto w-4 text-white sm:w-6" />
+                <Bars3Icon aria-hidden="true" className="h-auto w-4 text-white sm:w-6" />
               </button>
             )}
           </div>
@@ -138,8 +152,8 @@ const Navbar = () => {
         <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-slate-500 drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+            <button aria-label="Close menu" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <XMarkIcon aria-hidden="true" className="h-6 w-6 text-gray-400" />
             </button>
           </div>
           {/* MENU ITEMS */}
