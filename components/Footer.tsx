@@ -12,16 +12,6 @@ const Footer = () => {
           {/* LINKS */}
           <h2 className="mb-3 text-lg font-bold">Links</h2>
           <p className="mb-3 text-xs">
-            Keep an eye on{" "}
-            <Link
-              href="https://webdev-blog-cedekpoole.vercel.app"
-              target="_blank"
-              className="underline hover:font-bold"
-            >
-              my blog
-            </Link>
-          </p>
-          <p className="mb-3 text-xs">
             See{" "}
             <Link
               href="https://github.com/cedekpoole"
