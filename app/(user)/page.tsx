@@ -20,7 +20,7 @@ const Home = () => {
       {/* HERO IMAGE AND MAIN HEADER */}
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         {/* MAIN HEADER */}
-        <div className="md:basis:-3/5 z-10">
+        <div className="z-10 md:basis-3/5">
           {/* HEADINGS */}
           <MotionDiv duration={0.5} x={-50}>
             <div className="relative">
@@ -35,7 +35,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <p className="p-5 text-sm">
+            <p className="p-5 text-sm leading-relaxed">
               MSc Data Science candidate moving into data analytics &amp;
               analytics engineering. I work with SQL and Python, with a
               software-development background in building, testing and shipping
