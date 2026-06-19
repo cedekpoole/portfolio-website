@@ -21,8 +21,10 @@ const Contact = () => {
           </div>
           <p className="mt-5 leading-relaxed">
             I&apos;m looking for data analyst, analytics engineering, and junior
-            data engineering roles in London. Fill out the form below to get in
-            touch — collaboration and open-source projects also welcome.
+            data engineering roles in London. If you would like to get in touch,
+            please feel free to leave a message by filling out the form below!
+            Anyone interested in collaborating on a project is also welcome to
+            reach out :)
           </p>
         </MotionDiv>
         {/* FORM CONTENT */}

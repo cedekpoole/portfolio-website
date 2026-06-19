@@ -36,11 +36,12 @@ const Home = () => {
               </div>
             </div>
             <p className="p-5 text-sm leading-relaxed">
-              MSc Data Science candidate moving into data analytics &amp;
-              analytics engineering. I work with SQL and Python, with a
-              software-development background in building, testing and shipping
-              real code. Open to data analyst, analytics engineering and junior
-              data engineering roles in London.
+              Philosophy graduate and MSc Data Science student, moving towards
+              data analytics, analytics engineering and junior data engineering.
+              I like turning messy information into something clearer, cleaner
+              and more usable. Currently working with SQL and Python, and
+              building a portfolio around data analysis, modelling, pipelines
+              and data quality.
             </p>
           </MotionDiv>
           {/* CONTACT ME BUTTON */}

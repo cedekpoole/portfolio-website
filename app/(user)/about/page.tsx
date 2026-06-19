@@ -16,12 +16,7 @@ const About = () => {
           <MotionDiv className="relative z-10" duration={0.8} x={0}>
             {/* PAGE TITLE */}
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
-              <Image
-                src={AboutText.src}
-                alt="About"
-                width={400}
-                height={400}
-              />
+              <Image src={AboutText.src} alt="About" width={400} height={400} />
             </div>
           </MotionDiv>
         </div>
@@ -43,14 +38,28 @@ const About = () => {
               />
             </div>
             <p className="mb-3 leading-relaxed text-gray-300 md:w-[60%]">
-              Completing an MSc Data Science at Kingston (September 2026),
-              following a BA Philosophy (1st class, Newcastle). My internship at
-              Goodwright focused on data visualisation for scientific
-              applications (React, Highcharts), and I&apos;ve since built and
-              published open-source data-visualisation packages. I&apos;m now
-              focused on the analytics and engineering side of data — deepening
-              my SQL and Python and learning dbt, data modelling and cloud —
-              while building out a data portfolio.
+              I am a Philosophy graduate and MSc Data Science student with an
+              affinity for problem solving. While I still very much enjoy
+              analysing continental philosophy, my main focus is now within the
+              world of data. I am interested in how messy, ambiguous information
+              can be cleaned, structured, analysed and turned into something
+              useful. <br />
+              <br />
+              Through my MSc, I have been developing skills in SQL, Python,
+              statistics, machine learning and data analysis, while becoming
+              increasingly drawn to the engineering side of data work. Before
+              moving into data science, I completed an intensive Front-End
+              Development certification and a 12-week Front-End Software
+              Development Internship with Goodwright, a company that develops
+              software for scientists. There, I worked on biological data
+              visualisations in a React.js environment, which helped connect my
+              interest in technology with the challenge of making complex
+              information interpretable. <br />
+              <br />I am now building my data portfolio and looking for data
+              analyst, BI/insight analyst, analytics engineering, or junior data
+              engineering roles in London. Seeking roles where I can work with
+              real data, continue learning, and help turn complexity into
+              clarity.
             </p>
             <div className="mt-8 flex justify-evenly">
               <Link href="/CV.pdf" download>
