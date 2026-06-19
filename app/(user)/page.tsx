@@ -26,16 +26,16 @@ const Home = () => {
             <div className="relative">
               <div className="after:absolute after:-left-8 after:-top-5 after:scale-x-[-1] after:content-bang">
                 <div className="mt-4">
-                  <h1 className="text-4xl font-bold leading-tight text-gray-200 sm:text-5xl lg:text-6xl">
+                  <h1 className="text-4xl font-bold leading-tight text-gray-200 sm:text-5xl">
                     Cameron Poole
                   </h1>
-                  <p className="mt-3 text-lg font-bold tracking-wide text-primary-100 sm:text-xl lg:text-2xl">
+                  <p className="mt-2 text-lg font-bold tracking-wide text-primary-100 sm:text-xl">
                     Data Engineer · Data Analyst · Analytics Engineer
                   </p>
                 </div>
               </div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed">
+            <p className="p-5 text-sm leading-relaxed">
               MSc Data Science candidate moving into data analytics &amp;
               analytics engineering. I work with SQL and Python, with a
               software-development background in building, testing and shipping
