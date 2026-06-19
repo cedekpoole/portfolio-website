@@ -13,17 +13,16 @@ const Contact = () => {
             <div className="before:absolute before:-right-96 before:top-14 md:before:content-arrow3">
               <Image
                 src={ContactText.src}
-                alt="Contact Text"
+                alt="Contact"
                 width={500}
                 height={500}
               />
             </div>
           </div>
-          <p className="mt-5">
-            I am interested in full-time opportunities. If you would like to get
-            in touch, please feel free to leave a message by filling out the
-            form below! Anyone interested in collaborating on a project is also
-            welcome to reach out :)
+          <p className="mt-5 leading-relaxed">
+            I&apos;m looking for data analyst, analytics engineering, and junior
+            data engineering roles in London. Fill out the form below to get in
+            touch — collaboration and open-source projects also welcome.
           </p>
         </MotionDiv>
         {/* FORM CONTENT */}

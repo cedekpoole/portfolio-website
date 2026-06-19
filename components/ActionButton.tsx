@@ -6,7 +6,7 @@ type Props = {
 
 const ActionButton = ({ children }: Props) => {
   return (
-    <button className="mb-3 ml-5 rounded-md bg-gray-100 px-10 py-2 transition duration-500 hover:bg-primary-100 hover:text-white">
+    <button className="mb-3 ml-5 cursor-pointer rounded-md bg-gray-100 px-10 py-2.5 font-medium tracking-wide transition duration-300 hover:bg-primary-100 hover:text-white active:scale-95">
       {children}
     </button>
   );

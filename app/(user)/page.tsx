@@ -20,7 +20,7 @@ const Home = () => {
       {/* HERO IMAGE AND MAIN HEADER */}
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         {/* MAIN HEADER */}
-        <div className="md:basis:-3/5 z-10">
+        <div className="z-10 md:basis-3/5">
           {/* HEADINGS */}
           <MotionDiv duration={0.5} x={-50}>
             <div className="relative">
@@ -35,7 +35,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <p className="p-5 text-sm">
+            <p className="p-5 text-sm leading-relaxed">
               MSc Data Science candidate moving into data analytics &amp;
               analytics engineering. I work with SQL and Python, with a
               software-development background in building, testing and shipping
@@ -62,10 +62,12 @@ const Home = () => {
         <div className="md:z-10">
           <Image
             src={Hero.src}
-            alt="Profile Image"
+            alt="Cameron Poole"
             className="md:mt-20"
-            width={1200}
-            height={1200}
+            width={600}
+            height={600}
+            priority
+            sizes="(max-width: 768px) 80vw, (max-width: 1060px) 45vw, 500px"
           />
         </div>
       </div>
@@ -76,8 +78,9 @@ const Home = () => {
             <Image
               className="mt-14 hidden md:block"
               src={HomePageText.src}
-              alt="Homepage Text"
-              fill // Optional: Ensures the image fits the container
+              alt=""
+              fill
+              sizes="100vw"
             />
           </div>
         </div>

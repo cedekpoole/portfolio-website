@@ -10,12 +10,13 @@ const Footer = () => {
       <div className="justify-content mx-auto w-5/6 gap-16 text-gray-300 md:flex">
         <div className="mt-5 basis-1/4 md:mt-3">
           {/* LINKS */}
-          <h2 className="mb-3 text-lg font-bold">Links</h2>
+          <h3 className="mb-3 text-lg font-bold">Links</h3>
           <p className="mb-3 text-xs">
             See{" "}
             <Link
               href="https://github.com/cedekpoole"
               target="_blank"
+              rel="noopener noreferrer"
               className="underline hover:font-bold"
             >
               more projects
@@ -27,6 +28,7 @@ const Footer = () => {
             <Link
               href="https://www.linkedin.com/in/cam-edek-poole/"
               target="_blank"
+              rel="noopener noreferrer"
               className="underline hover:font-bold"
             >
               LinkedIn
@@ -35,7 +37,7 @@ const Footer = () => {
         </div>
         {/* CONTACT LINK */}
         <div className="z-20 mt-5 basis-1/4 md:mt-3">
-          <h2 className="mb-3 text-lg font-bold">Contact Me</h2>
+          <h3 className="mb-3 text-lg font-bold">Contact Me</h3>
           <p className="mb-3 text-xs">
             Fill in{" "}
             <Link className="underline hover:font-bold" href="/contact">
