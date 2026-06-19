@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const flexBetween = "flex items-center justify-between";
   const navLink =
-    "hover:text-primary-100 focus-visible:text-primary-100 transition duration-300";
+    "relative hover:text-primary-100 focus-visible:text-primary-100 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary-100 after:transition-all after:duration-300 hover:after:w-full";
 
   // use media query hook to determine if screen is above 1060px
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
