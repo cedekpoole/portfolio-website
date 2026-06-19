@@ -26,7 +26,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           />
         </Link>
         <div className="flex flex-col justify-between p-5">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-primary-100">
+          <h5 className="mb-3 text-2xl font-bold leading-tight tracking-tight [text-wrap:balance] text-white transition-colors duration-300 group-hover:text-primary-100">
             {project.title}
           </h5>
           <p className="mb-3 text-sm font-normal text-gray-100">
