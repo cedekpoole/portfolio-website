@@ -47,7 +47,7 @@ npm run dev
 
 ## Screenshots
 
-<!-- TODO: refresh these after the redesign — they still show the old copy/headline -->
+<!-- TODO: refresh these after the redesign -->
 
 | Home                                  | Projects                                     |
 | ------------------------------------- | -------------------------------------------- |
