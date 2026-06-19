@@ -18,7 +18,7 @@ const About = () => {
             <div className="before:absolute before:-right-3 before:top-2 before:content-bang after:absolute after:-left-[110%] after:z-[-1] md:after:content-waves">
               <Image
                 src={AboutText.src}
-                alt="About Page Title"
+                alt="About"
                 width={400}
                 height={400}
               />
@@ -36,13 +36,13 @@ const About = () => {
             <div className="mx-auto flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
               <Image
                 src={Summary.src}
-                alt="Summary"
+                alt=""
                 className="mx-auto mb-3 mt-3 md:mt-0"
                 width={100}
                 height={100}
               />
             </div>
-            <p className="mb-3 text-gray-300 md:w-[60%]">
+            <p className="mb-3 leading-relaxed text-gray-300 md:w-[60%]">
               Completing an MSc Data Science at Kingston (September 2026),
               following a BA Philosophy (1st class, Newcastle). My internship at
               Goodwright focused on data visualisation for scientific
