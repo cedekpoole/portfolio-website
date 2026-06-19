@@ -3,26 +3,24 @@
 import { FaPython, FaReact } from "react-icons/fa";
 import { SiPostgresql, SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
-
-const icons = [
-  FaPython,
-  SiPostgresql,
-  BsGit,
-  FaReact,
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-];
-
 import { motion } from "framer-motion";
 
-// Create an icon component with an animation effect for the about page
+const icons = [
+  { Icon: FaPython,      label: "Python"     },
+  { Icon: SiPostgresql,  label: "PostgreSQL"  },
+  { Icon: BsGit,         label: "Git"         },
+  { Icon: FaReact,       label: "React"       },
+  { Icon: SiTypescript,  label: "TypeScript"  },
+  { Icon: SiJavascript,  label: "JavaScript"  },
+  { Icon: SiTailwindcss, label: "Tailwind"    },
+];
+
 const TechIcon = () => {
   return (
-    <div className="mx-auto mt-7 flex max-w-[400px] flex-wrap justify-center gap-14 md:mx-0 md:w-[300px]">
-      {icons.map((Icon, index) => (
+    <div className="mx-auto mt-7 flex max-w-[360px] flex-wrap justify-center gap-8 md:mx-0 md:w-[320px]">
+      {icons.map(({ Icon, label }, index) => (
         <motion.div
-        key={index}
+          key={index}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -32,12 +30,13 @@ const TechIcon = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="relative">
-            <div className="before:absolute before:-bottom-4 before:left-1 before:content-line">
-              {
-                <Icon className="h-10 w-10 duration-500 hover:scale-[1.02] hover:text-primary-100" />
-              }
+          <div className="group flex flex-col items-center gap-2">
+            <div className="relative before:absolute before:-bottom-4 before:left-1 before:content-line">
+              <Icon className="h-10 w-10 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-100" />
             </div>
+            <span className="mt-5 text-[10px] font-medium uppercase tracking-widest text-gray-200 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+              {label}
+            </span>
           </div>
         </motion.div>
       ))}
