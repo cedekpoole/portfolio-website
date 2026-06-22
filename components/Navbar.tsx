@@ -1,7 +1,6 @@
 "use client";
 
 // Description: This file contains the navbar component
-import useMediaQuery from "@/hooks/useMediaQuery";
 import { MotionDiv } from "@/components/MotionDiv";
 import Logo from "@/assets/logo.png";
 import ActionButton from "@/components/ActionButton";
@@ -10,11 +9,7 @@ import { useEffect, useState } from "react";
 // Import icons
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faGithub,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Import link and image component
 import Link from "next/link";
@@ -42,9 +37,6 @@ const Navbar = () => {
   const navLink =
     "relative hover:text-primary-100 focus-visible:text-primary-100 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary-100 after:transition-all after:duration-300 hover:after:w-full";
 
-  // use media query hook to determine if screen is above 1060px
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
   // State to determine if menu is toggled
   const [isMenuToggled, setIsMenuToggled] = useState(false);
 
@@ -68,91 +60,78 @@ const Navbar = () => {
                 height={100}
               />
             </Link>
-            {/* RIGHT SIDE 
-             if viewport is above 1060px, display links in the navbar 
-             else show hamburger menu that displays links when clicked */}
-            {isAboveMediumScreens ? (
-              <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} text-md gap-8 text-gray-300`}>
-                  <Link className={`${navLink}`} href="/">
-                    Home
-                  </Link>
-                  <Link className={`${navLink}`} href="/projects">
-                    Projects
-                  </Link>
-                  <Link className={`${navLink}`} href="/about">
-                    About
-                  </Link>
-                  <Link className={`${navLink}`} href="/contact">
-                    Contact Me
-                  </Link>
-                </div>
-                <div className={`${flexBetween} gap-8`}>
-                  <Link
-                    aria-label="Discord profile"
-                    href="https://discordapp.com/users/1003033771618086922"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      aria-hidden="true"
-                      className="h-6 w-6 text-gray-300 hover:text-primary-100"
-                      icon={faDiscord}
-                      fade
-                    />
-                  </Link>
-                  <Link
-                    aria-label="LinkedIn profile"
-                    href="https://www.linkedin.com/in/cam-edek-poole/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      aria-hidden="true"
-                      className="h-6 w-6 text-gray-300 hover:text-primary-100"
-                      icon={faLinkedin}
-                      fade
-                    />
-                  </Link>
-                  <Link
-                    aria-label="GitHub profile"
-                    href="https://github.com/cedekpoole"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      aria-hidden="true"
-                      className="h-6 w-6 text-gray-300 hover:text-primary-100"
-                      icon={faGithub}
-                      fade
-                    />
-                  </Link>
-                  <MotionDiv duration={1} x={100}>
-                    <a href="/CV.pdf" download>
-                      <ActionButton>Download CV</ActionButton>
-                    </a>
-                  </MotionDiv>
-                </div>
+            <div className={`${flexBetween} hidden w-full md:flex`}>
+              <div className={`${flexBetween} text-md gap-8 text-gray-300`}>
+                <Link className={`${navLink}`} href="/">
+                  Home
+                </Link>
+                <Link className={`${navLink}`} href="/projects">
+                  Projects
+                </Link>
+                <Link className={`${navLink}`} href="/about">
+                  About
+                </Link>
+                <Link className={`${navLink}`} href="/contact">
+                  Contact Me
+                </Link>
               </div>
-            ) : (
-              <button
-                aria-label={isMenuToggled ? "Close menu" : "Open menu"}
-                aria-expanded={isMenuToggled}
-                className="rounded-full bg-primary-100 p-1 sm:p-2"
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-              >
-                <Bars3Icon aria-hidden="true" className="h-auto w-4 text-white sm:w-6" />
-              </button>
-            )}
+              <div className={`${flexBetween} gap-8`}>
+                <Link
+                  aria-label="LinkedIn profile"
+                  href="https://www.linkedin.com/in/cam-edek-poole/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    aria-hidden="true"
+                    className="h-6 w-6 text-gray-300 transition-colors duration-200 hover:text-primary-100"
+                    icon={faLinkedin}
+                    fade
+                  />
+                </Link>
+                <Link
+                  aria-label="GitHub profile"
+                  href="https://github.com/cedekpoole"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    aria-hidden="true"
+                    className="h-6 w-6 text-gray-300 transition-colors duration-200 hover:text-primary-100"
+                    icon={faGithub}
+                    fade
+                  />
+                </Link>
+                <MotionDiv duration={1} x={100}>
+                  <a href="/CV.pdf" download>
+                    <ActionButton>Download CV</ActionButton>
+                  </a>
+                </MotionDiv>
+              </div>
+            </div>
+            <button
+              aria-label={isMenuToggled ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuToggled}
+              className="rounded-full bg-primary-100 p-1 sm:p-2 md:hidden"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
+              <Bars3Icon
+                aria-hidden="true"
+                className="h-auto w-4 text-white sm:w-6"
+              />
+            </button>
           </div>
         </div>
       </div>
       {/* MOBILE MENU MODAL */}
-      {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-slate-500 drop-shadow-xl">
+      {isMenuToggled && (
+        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-slate-500 drop-shadow-xl md:hidden">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
-            <button aria-label="Close menu" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+            <button
+              aria-label="Close menu"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
               <XMarkIcon aria-hidden="true" className="h-6 w-6 text-gray-400" />
             </button>
           </div>

@@ -12,11 +12,50 @@ type Props = {
   project: Project;
 };
 
+const getProjectTags = (project: Project) => {
+  const text = `${project.title} ${project.description}`.toLowerCase();
+
+  if (
+    text.includes("tfl") ||
+    text.includes("bigquery") ||
+    text.includes("dbt")
+  ) {
+    return ["SQL", "BigQuery", "dbt"];
+  }
+
+  if (text.includes("statistical") || text.includes("regression")) {
+    return ["R", "Regression", "Modelling"];
+  }
+
+  if (text.includes("support-2") || text.includes("quality of life")) {
+    return ["R", "Clinical Data", "Analysis"];
+  }
+
+  if (text.includes("rna-seq") || text.includes("highcharts")) {
+    return ["React", "Highcharts", "npm"];
+  }
+
+  if (text.includes("classical ml") || text.includes("random forest")) {
+    return ["Python", "Machine Learning", "Models"];
+  }
+
+  if (
+    text.includes("readme") ||
+    text.includes("node.js") ||
+    text.includes("inquirer")
+  ) {
+    return ["Node.js", "CLI", "npm"];
+  }
+
+  return ["Data", "Analysis"];
+};
+
 const ProjectCard: React.FC<Props> = ({ project }) => {
+  const tags = getProjectTags(project);
+
   return (
     <MotionDiv className="z-20 flex" duration={0.8}>
       <div className="group flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-gray-300 shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(190,49,68,0.18)]">
-
         {/* Accent bar */}
         <div className="h-[3px] w-full flex-shrink-0 bg-primary-100" />
 
@@ -34,12 +73,22 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
 
         {/* Body */}
         <div className="flex flex-grow flex-col p-5">
-          <h5 className="mb-3 text-xl font-bold leading-tight tracking-tight [text-wrap:balance] text-white transition-colors duration-300 group-hover:text-primary-100">
+          <h5 className="mb-3 text-xl font-bold leading-tight tracking-tight text-white transition-colors duration-300 [text-wrap:balance] group-hover:text-primary-100">
             {project.title}
           </h5>
           <p className="flex-grow text-sm leading-relaxed text-gray-100">
             {project.description}
           </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-sm border border-gray-200/70 px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-gray-100 transition-colors duration-300 group-hover:border-primary-100/70 group-hover:text-white"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
 
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between border-t border-gray-200 pt-4">
@@ -50,7 +99,10 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-gray-100 transition-colors duration-200 hover:text-primary-100"
             >
               View Project
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3 w-3" />
+              <FontAwesomeIcon
+                icon={faArrowUpRightFromSquare}
+                className="h-3 w-3"
+              />
             </Link>
 
             <Link
@@ -64,7 +116,6 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             </Link>
           </div>
         </div>
-
       </div>
     </MotionDiv>
   );

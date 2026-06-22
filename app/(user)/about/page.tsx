@@ -1,6 +1,5 @@
 // Description: About page
 import AboutText from "@/assets/about-text.png";
-import Summary from "@/assets/summary-text.png";
 import TechIcon from "@/components/TechIcon";
 import ActionButton from "@/components/ActionButton";
 
@@ -8,9 +7,39 @@ import Link from "next/link";
 import { MotionDiv } from "@/components/MotionDiv";
 import Image from "next/image";
 
+const targetRoles = [
+  "Data Analyst",
+  "BI / Insight Analyst",
+  "Analytics Engineering",
+  "Junior Data Engineering",
+];
+
+const aboutSections = [
+  {
+    label: "Background",
+    text: "I am a Philosophy graduate and MSc Data Science student with an affinity for problem solving. While I still very much enjoy analysing continental philosophy, my main focus is now within the world of data. I am interested in how messy, ambiguous information can be cleaned, structured, analysed and turned into something useful.",
+  },
+  {
+    label: "Data focus",
+    text: "Through my MSc, I have been developing skills in SQL, Python, statistics, machine learning and data analysis, while becoming increasingly drawn to the engineering side of data work. Before moving into data science, I completed an intensive Front-End Development certification and a 12-week Front-End Software Development Internship with Goodwright, a company that develops software for scientists.",
+  },
+  {
+    label: "Looking for",
+    text: "I am now building my data portfolio and looking for roles in London where I can work with real data, continue learning, and help turn complexity into clarity.",
+  },
+];
+
 const About = () => {
   return (
-    <section className="md:pb-12">
+    <section className="relative [overflow-x:clip] md:pb-12">
+      <Image
+        src="/waves.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[210px] top-[calc(42.75rem+30px)] z-0 hidden translate-x-1/2 rotate-[130deg] md:block"
+        width={343}
+        height={274}
+      />
       <div className="mx-auto w-5/6 py-28">
         <div className="flex place-content-center">
           <MotionDiv className="relative z-10" duration={0.8} x={0}>
@@ -28,39 +57,31 @@ const About = () => {
             duration={0.8}
             y={100}
           >
-            <div className="mx-auto flex before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
-              <Image
-                src={Summary.src}
-                alt=""
-                className="mx-auto mb-3 mt-3 md:mt-0"
-                width={100}
-                height={100}
-              />
+            <div className="mb-8 mt-4 flex flex-wrap gap-2 before:absolute before:-bottom-10 md:w-[60%] md:before:content-line2">
+              {targetRoles.map((role) => (
+                <span
+                  key={role}
+                  className="rounded-sm border border-primary-100/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary-100"
+                >
+                  {role}
+                </span>
+              ))}
             </div>
-            <p className="mb-3 leading-relaxed text-gray-300 md:w-[60%]">
-              I am a Philosophy graduate and MSc Data Science student with an
-              affinity for problem solving. While I still very much enjoy
-              analysing continental philosophy, my main focus is now within the
-              world of data. I am interested in how messy, ambiguous information
-              can be cleaned, structured, analysed and turned into something
-              useful. <br />
-              <br />
-              Through my MSc, I have been developing skills in SQL, Python,
-              statistics, machine learning and data analysis, while becoming
-              increasingly drawn to the engineering side of data work. Before
-              moving into data science, I completed an intensive Front-End
-              Development certification and a 12-week Front-End Software
-              Development Internship with Goodwright, a company that develops
-              software for scientists. There, I worked on biological data
-              visualisations in a React.js environment, which helped connect my
-              interest in technology with the challenge of making complex
-              information interpretable. <br />
-              <br />I am now building my data portfolio and looking for data
-              analyst, BI/insight analyst, analytics engineering, or junior data
-              engineering roles in London. Seeking roles where I can work with
-              real data, continue learning, and help turn complexity into
-              clarity.
-            </p>
+            <div className="relative space-y-7 md:w-[60%]">
+              {aboutSections.map((section) => (
+                <div
+                  key={section.label}
+                  className="border-l-2 border-primary-100/70 pl-5"
+                >
+                  <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-primary-100">
+                    {section.label}
+                  </h3>
+                  <p className="leading-relaxed text-gray-300">
+                    {section.text}
+                  </p>
+                </div>
+              ))}
+            </div>
             <div className="mt-8 flex justify-evenly">
               <Link href="/CV.pdf" download>
                 <ActionButton>Download CV</ActionButton>
@@ -69,6 +90,9 @@ const About = () => {
           </MotionDiv>
           {/* SKILLS (TECH ICONS) */}
           <div className="mt-5">
+            <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.28em] text-primary-100">
+              Toolkit
+            </p>
             <TechIcon />
           </div>
         </div>

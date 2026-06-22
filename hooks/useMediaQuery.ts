@@ -3,17 +3,21 @@ import { useState, useEffect } from "react";
 // Create a custom hook to use media queries for responsive design (e.g. hamburger menu on mobile)
 
 const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState<boolean>(false);
+  const [matches, setMatches] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+
+    return window.matchMedia(query).matches;
+  });
 
   useEffect(() => {
     const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
     const listener = () => setMatches(media.matches);
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
-  }, [matches, query]);
+
+    setMatches(media.matches);
+    media.addEventListener("change", listener);
+
+    return () => media.removeEventListener("change", listener);
+  }, [query]);
 
   return matches;
 };

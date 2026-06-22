@@ -1,18 +1,21 @@
 "use client";
 
 import { FaPython, FaReact } from "react-icons/fa";
-import { SiPostgresql, SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiPostgresql, SiR, SiJupyter, SiPandas, SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const icons = [
   { Icon: FaPython,      label: "Python"     },
-  { Icon: SiPostgresql,  label: "PostgreSQL"  },
-  { Icon: BsGit,         label: "Git"         },
-  { Icon: FaReact,       label: "React"       },
-  { Icon: SiTypescript,  label: "TypeScript"  },
-  { Icon: SiJavascript,  label: "JavaScript"  },
-  { Icon: SiTailwindcss, label: "Tailwind"    },
+  { Icon: SiPostgresql,  label: "SQL"        },
+  { Icon: SiR,           label: "R"          },
+  { Icon: SiJupyter,     label: "Jupyter"    },
+  { Icon: SiPandas,      label: "Pandas"     },
+  { Icon: BsGit,         label: "Git"        },
+  { Icon: FaReact,       label: "React"      },
+  { Icon: SiTypescript,  label: "TypeScript" },
+  { Icon: SiJavascript,  label: "JavaScript" },
+  { Icon: SiTailwindcss, label: "Tailwind"   },
 ];
 
 const TechIcon = () => {
