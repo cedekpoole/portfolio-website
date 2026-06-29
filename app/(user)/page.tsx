@@ -49,7 +49,7 @@ const Home = () => {
             <MotionDiv
               duration={1}
               y={50}
-              className="before:absolute before:-right-8 after:absolute after:-top-5 after:left-52 after:content-bang sm:before:content-arrow"
+              className="before:absolute before:-right-8 md:before:-right-24 lg:before:-right-8 after:absolute after:-top-5 after:left-52 after:content-bang sm:before:content-arrow"
             >
               <div>
                 <Link href="/contact">
